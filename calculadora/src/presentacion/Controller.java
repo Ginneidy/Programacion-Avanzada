@@ -133,7 +133,7 @@ public class Controller implements ActionListener {
                 model.assignOperation(3);
                 model.setValueSymbol(3);
             }
-            ;
+          
         }
         if (e.getSource() == view.getDiviButton()) {
             if (view.getField().getText().length() != 0 && view.getField2().getText().length() != 0
@@ -159,7 +159,7 @@ public class Controller implements ActionListener {
                 model.setValueSymbol(4);
             }
         }
-        if (e.getSource() == view.getExponButton()) {;
+        if (e.getSource() == view.getExponButton()) {
             if(view.getField().getText().length() == 0 && view.getField2().getText().length() == 0){
                 view.getField().setText("0");
             } else if(view.getField2().getText().length() != 0 && view.getField().getText().length() == 0){
