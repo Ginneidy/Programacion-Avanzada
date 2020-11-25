@@ -16,7 +16,7 @@ const clearNumbers = (array) => array.map(fila =>
 )
 
 function setBoard(array) {
-    let c = 0 
+     c = 0 
     setblocks(array, 0, 3, 0, 3, 1)
     setblocks(array, 0, 3, 3, 6, 2)
     setblocks(array, 0, 3, 6, 9, 3)
@@ -34,9 +34,9 @@ function setblocks(array, start, end, start2, end2, n) {
     for (let i = start; i < end; i++) {
         for (let j = start2; j < end2; j++) {
             if (array[i][j] == 0) {
-                div.innerHTML += ('<input type="number"  min="1" max="9" id="cel' + c + '"  >');
+                div.innerHTML += ('<input type="text"  min="1" max="9" id="cel' + c + '"  " readonly = "readonly"  >');
             } else {
-                div.innerHTML += ('<input type="number" id="cel' + c + ' "placeholder =' + array[i][j] + ' " readonly = "readonly" >');
+                div.innerHTML += ('<input type="text" id="cel' + c + ' "placeholder =' + array[i][j] + ' " readonly = "readonly" >');
             }
             c++
         }
