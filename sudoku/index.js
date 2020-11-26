@@ -12,7 +12,7 @@ const initialBoard = [
 ];
 
 const clearNumbers = (array) => array.map(fila =>
-    fila.map(numero => Math.random() < 0.1 ? 0 : numero)
+    fila.map(numero => Math.random() < 0.51 ? 0 : numero)
 )
 const setBoard = (array) => {
     setblocks(array, 0, 3, 0, 3, 1)
