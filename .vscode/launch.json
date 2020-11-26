@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "pwa-chrome",
+        },
+        {
+            "type": "pwa-chrome",
+            "name": "https://github.com/Ginneidy/Programacion-Avanzada/blob/ceb55b0a21972d49431d224ed3d27a97724efbdf/sudoku/main.js#L4",
+            "request": "launch",
+            "url": "https://github.com/Ginneidy/Programacion-Avanzada/blob/ceb55b0a21972d49431d224ed3d27a97724efbdf/sudoku/main.js#L4"
+        }
+    ]
+}
