@@ -24,7 +24,7 @@ body {
 }
 
 .instructions {
-    width: 32%;
+    width: 30%;
     height: 400px;
     float: left;
     padding: 10px;
@@ -46,14 +46,14 @@ body {
 }
 
 .container {
-    width: 43%;
+    width: 34%;
     float: left;
     box-sizing: border-box;
 }
 
 .container .block input {
     width: 33%;
-    height: 77px;
+    height: 60px;
     border: 3px solid #ee6c4d;
     text-align: center;
     box-sizing: border-box;
@@ -64,9 +64,7 @@ body {
 }
 
 .block {
-    position: relative;
-    float: left;
-    width: 300px;
+
     padding: 0;
     margin: 0;
     margin-bottom: 5px;
@@ -90,13 +88,11 @@ input::placeholder {
 .editable:focus {
     border: 1px solid #003479;
 }
-
-.names {
-    width: 20%;
+.names{
+    width: 30%;
     height: 600px;
     float: right;
 }
-
 .names-h2 {
     text-align: center;
     font-family: 'Big Shoulders Stencil Display', cursive;
@@ -114,14 +110,14 @@ input::placeholder {
 }
 
 .buttons {
-    text-align: center;
+    width: 20%;
+    height: 600px;
+    text-align: right;
     float: left;
 }
 
 .buttons button {
-    padding: 15px;
-    margin-right: 70px;
-    margin-left: 70px;
+    padding: 10px;
     background-color: #293241;
     color: white;
     border-radius: 10px;
