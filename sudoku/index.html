@@ -5,107 +5,87 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página</title>
-    <style>
-        .container {
-            width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        input {
-            width: 50px;
-            height: 50px;
-            margin: 0px;
-            border: 1px solid rgb(3, 189, 3);
-            text-align: center;
-
-        }
-
-        .container div {
-            float: left;
-            border: 1px solid rgb(0, 0, 0);
-            width: 170px;
-            padding: 0;
-            margin: 0px;
-        }
-
-        dialog {
-            width: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-    </style>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
-
-    <div id="sudoku" class="container">
-        
-    <H1><FONT FACE="courier new" SIZE=6 COLOR="blue">
-            SUDOKU</FONT> </H1>
-
-        <p align="center">  
-            <FONT FACE="courier new">BIENVENIDO SEÑOR/A USUARIO A NUESTRO SUDOKU VIRTUAL</FONT>
-        </p>
-
-        
-        <div id="block1">
+    <div id="forBlur" >
+        <div class="title">
+            <h1 class="title-h1">Sudoku</h1>
+            <p class="welcome">BIENVENIDO SEÑOR/A USUARIO A NUESTRO SUDOKU VIRTUAL</p>
+        </div>
+        <div class="instructions">
+            <h2 class="instructions-h2" >Instrucciones</h2>
+            <ol class="instructions-list">
+                <li>Hay que completar las casillas vacías con un solo número del 1 al 9.</li>
+                <li>En una misma fila no puede haber números repetidos.</li>
+                <li>En una misma columna no puede haber números repetidos.</li>
+                <li>En una misma región no puede haber números repetidos.</li>
+                <li>La solución de un sudoku es única.</li>
+            </ol>
+        </div>
+    
+    
+        <div id="sudoku" class="container">
             
-
+            <div class="block" id="block1">
+    
+            </div>
+            <div class="block" id="block2">
+    
+            </div>
+            <div class="block" id="block3">
+    
+            </div>
+            <div class="block" id="block4">
+    
+            </div>
+            <div class="block" id="block5">
+    
+            </div>
+            <div class="block" id="block6">
+    
+            </div>
+            <div class="block" id="block7">
+    
+            </div>
+            <div class="block" id="block8">
+    
+            </div>
+            <div class="block" id="block9">
+    
+            </div>
+    
         </div>
-        <div id="block2">
-
+    
+        <div class="names">
+            <h2 class="names-h2">Desarrollado por</h2>
+            <p class="names-p">
+                GINNEIDY LEÓN ZABALA<br>
+                NICOLÁS GUTIÉRREZ MORALES <br>
+                JEFFERSON ESCOBAR RIVAS
+            </p>
         </div>
-        <div id="block3">
-
+        <div class="buttons">
+            <button id="restart" onclick="restartGame()" >Empezar de nuevo</button>
+            <button id="newGame" onclick="newGame()" >Nuevo Juego</button>
         </div>
-        <div id="block4">
-
-        </div>
-        <div id="block5">
-
-        </div>
-        <div id="block6">
-
-        </div>
-        <div id="block7">
-
-        </div>
-        <div id="block8">
-
-        </div>
-        <div id="block9">
-
-        </div>
-
     </div>
-    <div class="buttons">
-        <button id="restar" >Empezar de nuevo</button>
-        <button id="newGame">Nuevo Juego</button>
+
+    <div class="endGame">
+        <dialog id="myDialog" class="endGame-dialog" >
+            <h3 class="endGame-h3" >¡Felicidades!</h3>
+            <p class="endGame-p" >Has completado el sudoku</p>
+            <p class="endGame-o" >¿Deseas comenzar un nuevo juego?</p>
+            <button class="endGame-btn" onclick="location.reload()" >Si</button>
+            <button class="endGame-btn" onclick="finaliceGame()" >No</button>
+        </dialog>
     </div>
 
     <script src="./index.js"></script>
-    <div id="numbers"></div>
-    <script src="./main.js"></script>
 
 </body>
-<p align="left">  
-    <FONT FACE="courier new"> _______***  I N T E G R A N T E S ______<br> 
-       __ o GINNEIDY LEÓN ZABALA    ____  (20192020077)   <br> 
-       __ o NICOLÁS GUTIÉRREZ MORALES (20172020003)   <br>     
-       __ o JEFFERSON ESCOBAR RIVAS    _ (20192020143) </FONT>
-  
-</p>
-<svg> 
-
-    <rect x="50" y="50" width="200" height="100"  rx="30" ry="50"  />
-    
-</svg>
-
 
 </html>

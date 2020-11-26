@@ -33,10 +33,10 @@ const setblocks = (array, start, end, start2, end2, n) => {
     for (let i = start; i < end; i++) {
         for (let j = start2; j < end2; j++) {
             if (array[i][j] == 0) {
-                div.innerHTML += ('<input  type="text" maxlength="1" onkeypress="return check(event,this)" id="cel[' + i + '][' + j + ']" >');
+                div.innerHTML += ('<input class="editable" type="text" maxlength="1" onkeypress="return check(event,this)" id="cel[' + i + '][' + j + ']" >');
 
             } else {
-                div.innerHTML += ('<input type="text" id="cel[' + i + '][' + j + ']"placeholder =' + array[i][j] + ' " readonly = "readonly" >');
+                div.innerHTML += ('<input class="noEditable" type="text" id="cel[' + i + '][' + j + ']"placeholder =' + array[i][j] + ' " readonly = "readonly" >');
             }
         }
     }
@@ -87,8 +87,13 @@ const createBoard = () => {
         initialBoard[box3[2]],
     ]
     console.log(board)
-    const newBoard = clearNumbers(board)
-    copy = newBoard
+    newBoard = clearNumbers(board)
+    copy = [[], [], [], [], [], [], [], [], []]
+    for (let i = 0; i < newBoard.length; i++) {
+        for (let j = 0; j < newBoard.length; j++) {
+            copy[i][j] = newBoard[i][j];
+        }
+    }
     console.log(newBoard)
     setBoard(newBoard)
 }
@@ -110,9 +115,37 @@ const checkBoard = (array) => {
     }
 
     if (t !== false) {
-        alert("sudoku terminado")
+        document.getElementById("forBlur").classList.add('blurContainer');
+        dialog.show();
+    }
+}
+const restartGame = () => {
+    var respuesta = confirm("¿Desea reiniciar el sudoku?")
+
+    if (respuesta) {
+        deleteInputs()
+        setBoard(newBoard)
+        alert("Sudoku Reiniciado");
+    }
+}
+const deleteInputs = () => {
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            input = document.getElementById("cel[" + i + "][" + j + "]");
+            padre = input.parentNode;
+            padre.removeChild(input);
+        }
+    }
+}
+const newGame = () =>{
+    var respuesta = confirm("¿Esta seguro de iniciar un nuevo juego?")
+    if (respuesta) {
+        location.reload()
     }
 }
 
-
+const finaliceGame = () =>{
+    document.getElementById("forBlur").classList.remove('blurContainer');
+    dialog.close()   
+}
 createBoard()

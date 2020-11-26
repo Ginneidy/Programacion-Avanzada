@@ -1,27 +1,163 @@
-.container {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-input {
-    width: 50px;
-    height: 50px;
-    margin: 0px;
-    border: 1px solid rgb(24, 17, 122);
-    text-align: center;
+.title {
+    text-align: center
 }
-.container div{
+
+.title-h1 {
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 55px;
+    color: #293241;
+}
+
+.welcome {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #293241;
+}
+
+.instructions {
+    width: 32%;
+    height: 400px;
     float: left;
-    border: 1px solid rgb(0, 0, 0);
-    width: 170px;
-    padding: 0;
-    margin: 0px;
+    padding: 10px;
+    box-sizing: border-box;
 }
-dialog{
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
+
+.instructions-h2 {
     text-align: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 35px;
+    color: #293241;
+}
+
+.instructions-list {
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.container {
+    width: 38%;
+    height: 600px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.container .block input {
+    width: 77px;
+    height: 77px;
+    border: 3px solid #ee6c4d;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.block {
+    float: left;
+    width: 33%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+input::placeholder {
+    color: #293241;
+    opacity: 1;
+}
+
+.noEditable:focus {
+    outline: none;
+}
+
+.editable {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: #000a99;
+}
+
+.editable:focus {
+    border: 1px solid #003479;
+}
+
+.names {
+    width: 29%;
+    height: 600px;
+    float: right;
+}
+
+.names-h2 {
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 35px;
+    color: #293241;
+    margin-top: 150px;
+}
+
+.names-p {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.buttons {
+    text-align: center;
+    float: left;
+}
+
+.buttons button {
+    padding: 15px;
+    margin-right: 70px;
+    margin-left: 70px;
+    background-color: #293241;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+
+.endGame {
+    position: relative;
+    margin-top: 14%;
+    margin-left: 10px;
+}
+
+.endGame-dialog {
+    text-align: center;
+    width: 400px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 4px solid #1b264f;
+}
+
+.endGame-btn {
+    padding: 10px;
+    width: 20%;
+    background-color: #293241;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.blurContainer {
+    filter: blur(3px);
+    transform: scale(0.95);
 }
