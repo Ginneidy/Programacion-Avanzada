@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Ingreso</title>
+</head>
+
+<body>
+    <div class="left">
+        <h1 class="left-title">BIENVENIDO</h1>
+        <p class="left-p">Ingresa tus datos para realizar e interactuar con tu pedido</p>
+        <img src="./assets/img/Login1.png" alt="">
+        <button><a href="./loginAdmin.html">Soy un administrador</a></button>
+    </div>
+    <div class="right">
+        <form  onsubmit="return false">
+            <div class="right-container">
+                <label for="name">Nombre</label>
+                <input type="text" id="uName" name="uName" class="right-input">
+                <label for="cc">Cedula</label>
+                <input type="text"  id="identification" class="right-input">
+                <label for="telephone">Telefono</label>
+                <input type="text"  id="telephone" class="right-input">
+                <label for="email">Email</label>
+                <input type="email"  id="email" class="right-input">
+                <label for="department">Departamento</label>
+                <input type="text"  id="department" class="right-input">
+                <label for="city">Ciudad/Municipio</label>
+                <input type="text"  id="city" class="right-input">
+                <label for="address">Dirección</label>
+                <input type="text"  id="address" class="right-input">
+                <label for="address">Contraseña</label>
+                <input type="password"  id="password" class="right-input">
+                <button id="submit" >Ingresar</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="./js/formUser.js"></script>
+</body>
+
+</html>

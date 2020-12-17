@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/checkAdminToken.js"></script>
+    <title>Administrador web</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="header-nav">
+            <ul>
+                <a href="./layout6.html" class="home-link"><i class="fas fa-store"></i> </a>
+                <h1 class="header-title"> <a href="./layout6.html" class="home-link">APP WEB</a> </h1>
+                <i class="far fa-user dropbtn" onclick="dropdown()"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="logout">Cerrar Sesión</a>
+                </div>
+                <li class="header-li"><a href="./adminConsult.html">Consultar</a></li>
+                <li class="header-li"><a href="./update.html">Actualizar</a></li>
+                <li class="header-li"><a href="./deleteOrder.html">Borrar pedido</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="info">
+            <div class="info-img">
+                <img src="./assets/img/inicioadmin.png" alt="">
+            </div>
+            <div class="info-informacion">
+                <h2 class="info-title">Aplicación Web</h2>
+                <p>Bienvenido administrador, aqui puede interactuar con los pedidos de sus usuarios</p>
+            </div>
+            
+
+        </div>
+
+        <div class="info2">
+            <h3>¿Qué puedes hacer en nuestro aplicativo web?</h3>
+            <div class="info2-pcontainer">
+                <p>Ver cuantos clientes existen, borrar, consultar o actualizar sus pedidos</p>
+            </div>
+            <div class="info2-container">
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="divider">
+
+    </div>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/logoutAdmin.js"></script>
+</body>
+
+</html>

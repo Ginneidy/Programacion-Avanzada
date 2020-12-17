@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/checkAdminToken.js"></script>
+    <title>Consultar pedidos</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="header-nav">
+            <ul>
+                <a href="./layout6.html" class="home-link"><i class="fas fa-store"></i> </a>
+                <h1 class="header-title"> <a href="./layout6.html" class="home-link">APP WEB</a> </h1>
+                <i class="far fa-user dropbtn" onclick="dropdown()"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="logout">Cerrar Sesión</a>
+                </div>
+                <li class="header-li"><a href="">Consultar</a></li>
+                <li class="header-li"><a href="./update.html">Actualizar</a></li>
+                <li class="header-li"><a href="./deleteOrder.html">Borrar pedido</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="delete-order" id="dele-order">
+        <div class="delete-order-title">
+            <h2>Consultar pedido</h2>
+            <hr>
+        </div>
+        <div class="user-order">
+            <label for="userId" class="user-order-label">Código del usuario</label>
+            <input type="text" id="codUser" class="user-order-input">
+            <button class="user-order-btn" id="search">Buscar</button>
+        </div>
+        <div id="userInfo" class="update">
+
+        </div>
+    </div>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/adminConsult.js"></script>
+    <script src="./js/logoutAdmin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+import sqlite3
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+with sqlite3.connect("tienda.db") as db:
+    cursor = db.cursor()
+
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS user(
+userID INTEGER PRIMARY KEY,
+username VARCHAR(20) NOT NULL,
+docuemnt VARCHAR(20) NOT NULL,
+telephone VARCHAR(10) NOT NULL,
+email VARCHAR(20) NOT NULL,
+department VARCHAR(20) NOT NULL,
+city VARCHAR(20) NOT NULL,
+address VARCHAR(20) NOT NULL,
+password VARCHAR(20) NOT NULL);
+''')
+
+
+def register(name, document, telephone, email, department, city, address, password):
+    cursor.execute("""
+    INSERT INTO user(username,docuemnt,telephone,email,department,city,address,password)
+    VALUES(name,document, telephone, email, department, city, address, password)
+    """)
+    
+app = Flask(__name__)
+CORS(app)
+
+
+@app.route('/layout2', methods=['POST'])
+def test():
+    register(request.json['userName'], request.json['userDocument'], request.json['userTelephone'], request.json['userEmail'],
+             request.json['userDepartment'], request.json['userCity'], request.json['userAddress'], request['userPassword'])
+    return jsonify({"Result": "Welcome, "
+                    + request.json['userName'] + request.json['document']})
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+,"""+document+""","""+telephone+""","""+email+""","""+department+""","""+city+""","""+address+""","""+password+"""

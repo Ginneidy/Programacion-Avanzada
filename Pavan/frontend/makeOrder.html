@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Hacer Pedido</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="header-nav">
+            <ul>
+                <a href="./layout1-2.html" class="home-link"><i class="fas fa-store"></i> </a>
+                <h1 class="header-title"> <a href="./layout1-2.html" class="home-link">APP WEB</a> </h1>
+                <i class="far fa-user dropbtn" onclick="dropdown()"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="logout">Cerrar Sesión</a>
+                </div>
+                <li class="header-li"><a id="order" href="">Hacer pedido</a></li>
+                <li class="header-li"><a id="consult" href="./consult.html">Consultar</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search">
+        <input type="text" value="Buscar.." name="search" class="search-input">
+    </div>
+    <div class="categories">
+        <div class="categories-card">Nuevo</div>
+        <div class="categories-card">Promoción</div>
+        <div class="categories-card">Suéters</div>
+        <div class="categories-card">Camisetas</div>
+    </div>
+    <div class="products">
+        <h2 class="products-title">Nuevo</h2>
+        <div class="product-container">
+            <p  class="product-price">$110.000</p>
+            <img src="./assets/img/Productos/SPI31VKKR0B.jpeg" id="SPI31VKKR0B2" alt="">
+            <button class="products-btn" id="SPI31VKKR0B" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SPI31VKKR0B1" min="1" class="products-input" value="1">
+        </div>
+        <div class="product-container">
+            <p  class="product-price">$128.000</p>
+            <img src="./assets/img/Productos/SP3DG45OD99.jpeg"  id="SP3DG45OD992" alt="">
+            <button class="products-btn" id="SP3DG45OD99" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SP3DG45OD991"  min="1" class="products-input" value="1">
+        </div>
+        <div class="product-container">
+            <p  class="product-price">$90.000</p>
+            <img src="./assets/img/Productos/SPNOXDCFWBR.jpeg" id="SPNOXDCFWBR2" alt="">
+            <button class="products-btn" id="SPNOXDCFWBR" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SPNOXDCFWBR1"  min="1" class="products-input" value="1">
+        </div>
+        <div class="product-container">
+            <p  class="product-price">$116.000</p>
+            <img src="./assets/img/Productos/SP8GFRGAEEC.jpeg" id="SP8GFRGAEEC2" alt="">
+            <button class="products-btn" id="SP8GFRGAEEC" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SP8GFRGAEEC1"  min="1" class="products-input" value="1">
+        </div>
+        <div class="product-container">
+            <p  class="product-price">$113.000</p>
+            <img src="./assets/img/Productos/SPO128YWI08.jpeg" id="SPO128YWI082" alt="">
+            <button class="products-btn" id="SPO128YWI08" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SPO128YWI081"  min="1" class="products-input" value="1">
+        </div>
+        <div class="product-container">
+            <p  class="product-price">$90.000</p>
+            <img src="./assets/img/Productos/SPL2X9JADO8.jpeg" id="SPL2X9JADO82" alt="">
+            <button class="products-btn" id="SPL2X9JADO8" onclick="add(this)">Agregrar</button>
+            <input type="number" id="SPL2X9JADO81"  min="1" class="products-input" value="1">
+        </div>
+
+    </div>
+    <script src="./js/checkToken.js"></script>
+    <script src="./js/makeOrder.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/dropdown.js"></script>
+</body>
+
+</html>
