@@ -111,8 +111,8 @@ canvases.drag.onmouseup = function () {
 		for (let index = 0; index < state.spaces.length; index++) {
 			var space = state.spaces[index];
 			if (
-				Math.abs(token.x - space.x) < token_widht / 0.6 &&
-				Math.abs(token.y - space.y) < token_height / 1.5
+				Math.abs(token.x - space.x) < token_widht / 0.7 &&
+				Math.abs(token.y - space.y) < token_height / 0.9
 			) {
 				token.x = space.x;
 				token.y = space.y;
@@ -212,13 +212,66 @@ function start() {
 			token: null,
 			position: pos,
 		});
-		if (index == 59) {
-			changeX += 45
-			changeY += 25
+		if(index == 107){
+			changeX += -215
+			changeY += 45
+			pos == 88
+		}else if(index >107){
+			changeX += 26
+			changeY += -15
+			pos -=1
+		}
+		else if (index == 99){
+			changeX += -3
+			changeY += -45
+			pos +=1
+		}else if (index > 99){
+			changeX += 26
+			changeY += -15
+			pos+=1
+		}
+		else if (index == 91){
+			changeX += 35
+			changeY += -65
+			pos = 65
+		}else if (index > 91 ){
+			changeX += -26
+			changeY += -15
+			pos+=1
+		}
+		else if (index == 83){
+			changeX += -150
+			changeY += -165
+			pos = 71
+		}else if (index > 83){
+			changeX += 26
+			changeY += 15
+			pos -=1
+		}
+		else if (index == 75){
+			changeX += 40
+			changeY += -20
 			pos += 1
-		} else if (index > 59) {
-			changeX += 45
-			changeY += 25
+		} else if (index > 75){
+			changeX += 26
+			changeY += 15
+			pos +=1
+		}
+		else if  (index == 67){
+			changeX += 70
+			changeY += 0
+			pos = 48
+		}else if (index >67 && index < 75){
+			changeY += -30
+			pos += 1
+		}
+		else if (index == 59) {
+			changeX += 67	
+			changeY += -210
+			pos = 54
+		} else if (index > 59 && index <67) {
+			changeY += 30
+			pos -= 1
 		} else if (index == 51) {
 			changeX += 45
 			changeY += 25
