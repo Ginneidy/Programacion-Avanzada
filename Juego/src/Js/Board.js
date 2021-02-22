@@ -48,8 +48,10 @@ function drawSpaces() {
 }
 function drawToken(token, context) {
 	context.fillStyle = token.color;
+	context.lineWidht = 3;
 	context.strokeStyle = "black";
 	context.fillRect(token.x, token.y, token_widht, token_height);
+	context.strokeRect(token.x, token.y, token_widht, token_height);
 }
 function drawTokens() {
 	context.tokens.clearRect(0, 0, canvases.tokens.width, canvases.tokens.height);
@@ -109,12 +111,13 @@ canvases.drag.onmouseup = function () {
 		for (let index = 0; index < state.spaces.length; index++) {
 			var space = state.spaces[index];
 			if (
-				Math.abs(token.x - space.x) < token_widht / 1.5 &&
+				Math.abs(token.x - space.x) < token_widht / 0.6 &&
 				Math.abs(token.y - space.y) < token_height / 1.5
 			) {
 				token.x = space.x;
 				token.y = space.y;
 				didMatch = true;
+				console.log(space.position);
 				state.holdingToken = null;
 				break;
 			}
@@ -198,18 +201,98 @@ function start() {
 			color = "#80a5b5";
 		}
 	}
-	for (let index = 0; index < 168; index += 25) {
+	var changeX = 0;
+	var changeY = 0
+	var pos = 1
+	for (let index = 0; index < 168; index += 1) {
+
 		spaces.push({
-			x: window.innerHeight,
-			y: 105,
+			x: (window.innerHeight - 145) + changeX,
+			y: 225 + changeY,
 			token: null,
+			position: pos,
 		});
+		if (index == 59) {
+			changeX += 45
+			changeY += 25
+			pos += 1
+		} else if (index > 59) {
+			changeX += 45
+			changeY += 25
+		} else if (index == 51) {
+			changeX += 45
+			changeY += 25
+			pos += 1
+		} else if (index > 51 && index < 59) {
+			changeY += 30
+			pos += 1
+		}
+		else if (index == 43) {
+			changeX += 37
+			changeY += 65
+			pos = 31
+		} else if (index > 43 && index < 51) {
+			changeX += 25
+			changeY += -17
+			pos += 1
+		} else if (index == 35) {
+			changeX += 210
+			changeY += -55
+			pos = 37
+		} else if (index > 35 && index < 43) {
+			changeX += -25
+			changeY += 16
+			pos -= 1
+		}
+		else if (index == 27) {
+			changeX += -5
+			changeY += 45
+			pos += 1
+		} else if (index > 27 && index < 35) {
+			changeX += -25
+			changeY += 16
+			pos += 1
+		}
+		else if (index == 19) {
+			changeX += -40
+			changeY += 65
+			pos = 14
+
+		} else if (index > 19) {
+			changeX += 27
+			changeY += 15
+			pos += 1
+		} else if (index == 11) {
+			changeY += 165
+			changeX += 160
+			pos = 20
+		} else if (index > 11 && index < 19) {
+			changeX += -27
+			changeY += -15
+			pos -= 1
+		}
+		else if (index == 3) {
+			changeX = -35
+			changeY += 20
+			pos += 1
+		} else if (index > 3 && index < 11) {
+			changeX += -27
+			changeY += -15
+			pos += 1
+		}
+		else {
+			changeY += 30
+			pos += 1
+		}
+
 	}
 	state.spaces = spaces;
 	state.tokens = tokens;
+	console.log(spaces);
 	window.onresize();
 	drawSpaces();
 	drawTokens();
+
 }
 window.onload = function () {
 	start();
