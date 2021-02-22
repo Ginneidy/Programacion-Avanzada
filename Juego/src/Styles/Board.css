@@ -1,0 +1,14 @@
+body {
+}
+
+.layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.board {
+	position: absolute;
+	z-index: -2;
+	left: 25%;
+	top: 5rem;
+}
